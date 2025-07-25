@@ -1,0 +1,53 @@
+# Node.js backend
+node_modules/
+.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+.pnpm-debug.log*
+
+# PM2 logs
+logs
+*.log
+
+# React frontend (commonly inside a 'client' or 'portfolio' folder)
+portfolio/node_modules/
+portfolio/build/
+portfolio/.env
+portfolio/.next/
+portfolio/.turbo/
+
+# Mac system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+
+# VSCode settings
+.vscode/
+*.code-workspace
+
+# Others
+*.swp
+*.swo
+
+# Optional if using TypeScript
+*.tsbuildinfo
+
+# IDE folders
+.idea/
+*.iml
+
+# Coverage reports
+coverage/
+
+# ESLint cache
+.eslintcache
+
+# Next.js
+.next/
+
+# Optional Docker
+docker-compose.override.yml
+.docker/
