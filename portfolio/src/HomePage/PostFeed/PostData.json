@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "content": "Check out this amazing article with an image! Check out this amazing article with an image! Check out this amazing article with an image!",
+    "image": "https://via.placeholder.com/600x400",
+    "article": "This article discusses the latest trends in technology.",
+    "video": null,
+    "time": "2 hours ago",
+    "comments": [
+      {
+        "name": "John Doe",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Great article!",
+        "time": "1 hour ago"
+      },
+      {
+        "name": "Jane Smith",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Really informative post. Loved the examples!",
+        "time": "30 minutes ago"
+      },
+      {
+        "name": "Mike Johnson",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "I disagree with some points, but overall it's a solid write-up. I disagree with some points, but overall it's a solid write-up. I disagree with some points, but overall it's a solid write-up. I disagree with some points, but overall it's a solid write-up.",
+        "time": "2 hours ago"
+      },
+      {
+        "name": "Sarah Lee",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Can you provide more details on the second topic?",
+        "time": "45 minutes ago"
+      },
+      {
+        "name": "Emily Davis",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Thanks for sharing this! Helped me a lot!",
+        "time": "15 minutes ago"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "content": "Here's a video tutorial on React.js basics.",
+    "image": null,
+    "article": null,
+    "video": "https://www.w3schools.com/html/mov_bbb.mp4",
+    "time": "2 hours ago",
+    "comments": [
+      {
+        "name": "John Doe",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Great article!",
+        "time": "1 hour ago"
+      },
+      {
+        "name": "Jane Smith",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Really informative post. Loved the examples!",
+        "time": "30 minutes ago"
+      },
+      {
+        "name": "Mike Johnson",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "I disagree with some points, but overall it's a solid write-up. I disagree with some points, but overall it's a solid write-up. I disagree with some points, but overall it's a solid write-up. I disagree with some points, but overall it's a solid write-up.",
+        "time": "2 hours ago"
+      },
+      {
+        "name": "Sarah Lee",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Can you provide more details on the second topic?",
+        "time": "45 minutes ago"
+      },
+      {
+        "name": "Emily Davis",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Thanks for sharing this! Helped me a lot!",
+        "time": "15 minutes ago"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "content": "Just some text content here with a cool message.",
+    "image": null,
+    "article": "Sometimes simple text posts can engage a lot of readers without any media.",
+    "video": null,
+    "time": "2 hours ago",
+    "comments": [
+      {
+        "name": "John Doe",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Great article!",
+        "time": "1 hour ago"
+      },
+      {
+        "name": "Jane Smith",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Really informative post. Loved the examples!",
+        "time": "30 minutes ago"
+      },
+      {
+        "name": "Mike Johnson",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "I disagree with some points, but overall it's a solid write-up. I disagree with some points, but overall it's a solid write-up. I disagree with some points, but overall it's a solid write-up. I disagree with some points, but overall it's a solid write-up.",
+        "time": "2 hours ago"
+      },
+      {
+        "name": "Sarah Lee",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Can you provide more details on the second topic?",
+        "time": "45 minutes ago"
+      },
+      {
+        "name": "Emily Davis",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Thanks for sharing this! Helped me a lot!",
+        "time": "15 minutes ago"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "content": "This is an image-only post. Look at this amazing view!",
+    "image": "https://via.placeholder.com/600x300",
+    "article": null,
+    "video": null,
+    "time": "2 hours ago",
+    "comments": [
+      {
+        "name": "John Doe",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Great article!",
+        "time": "1 hour ago"
+      },
+      {
+        "name": "Jane Smith",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Really informative post. Loved the examples!",
+        "time": "30 minutes ago"
+      },
+      {
+        "name": "Mike Johnson",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "I disagree with some points, but overall it's a solid write-up. I disagree with some points, but overall it's a solid write-up. I disagree with some points, but overall it's a solid write-up. I disagree with some points, but overall it's a solid write-up.",
+        "time": "2 hours ago"
+      },
+      {
+        "name": "Sarah Lee",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Can you provide more details on the second topic?",
+        "time": "45 minutes ago"
+      },
+      {
+        "name": "Emily Davis",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Thanks for sharing this! Helped me a lot!",
+        "time": "15 minutes ago"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "content": "This post has both an image and video! Multimedia!",
+    "image": "https://via.placeholder.com/400x300",
+    "article": null,
+    "video": "https://www.w3schools.com/html/mov_bbb.mp4",
+    "time": "2 hours ago",
+    "comments": [
+      {
+        "name": "John Doe",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Great article!",
+        "time": "1 hour ago"
+      },
+      {
+        "name": "Jane Smith",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Really informative post. Loved the examples!",
+        "time": "30 minutes ago"
+      },
+      {
+        "name": "Mike Johnson",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "I disagree with some points, but overall it's a solid write-up. I disagree with some points, but overall it's a solid write-up. I disagree with some points, but overall it's a solid write-up. I disagree with some points, but overall it's a solid write-up.",
+        "time": "2 hours ago"
+      },
+      {
+        "name": "Sarah Lee",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Can you provide more details on the second topic?",
+        "time": "45 minutes ago"
+      },
+      {
+        "name": "Emily Davis",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Thanks for sharing this! Helped me a lot!",
+        "time": "15 minutes ago"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "content": "A video with no description.",
+    "image": null,
+    "article": null,
+    "video": "https://www.w3schools.com/html/mov_bbb.mp4",
+    "time": "2 hours ago",
+    "comments": [
+      {
+        "name": "John Doe",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Great article!",
+        "time": "1 hour ago"
+      },
+      {
+        "name": "Jane Smith",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Really informative post. Loved the examples!",
+        "time": "30 minutes ago"
+      },
+      {
+        "name": "Mike Johnson",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "I disagree with some points, but overall it's a solid write-up. I disagree with some points, but overall it's a solid write-up. I disagree with some points, but overall it's a solid write-up. I disagree with some points, but overall it's a solid write-up.",
+        "time": "2 hours ago"
+      },
+      {
+        "name": "Sarah Lee",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Can you provide more details on the second topic?",
+        "time": "45 minutes ago"
+      },
+      {
+        "name": "Emily Davis",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Thanks for sharing this! Helped me a lot!",
+        "time": "15 minutes ago"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "content": "This post highlights an exciting tech event with an article.",
+    "image": null,
+    "article": "Join us in this exclusive event where we discuss the future of AI and technology.",
+    "video": null,
+    "time": "2 hours ago",
+    "comments": [
+      {
+        "name": "John Doe",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Great article!",
+        "time": "1 hour ago"
+      },
+      {
+        "name": "Jane Smith",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Really informative post. Loved the examples!",
+        "time": "30 minutes ago"
+      },
+      {
+        "name": "Mike Johnson",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "I disagree with some points, but overall it's a solid write-up. I disagree with some points, but overall it's a solid write-up. I disagree with some points, but overall it's a solid write-up. I disagree with some points, but overall it's a solid write-up.",
+        "time": "2 hours ago"
+      },
+      {
+        "name": "Sarah Lee",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Can you provide more details on the second topic?",
+        "time": "45 minutes ago"
+      },
+      {
+        "name": "Emily Davis",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Thanks for sharing this! Helped me a lot!",
+        "time": "15 minutes ago"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "content": "Behind the scenes of a photo shoot.",
+    "image": "https://via.placeholder.com/500x300",
+    "article": null,
+    "video": null,
+    "time": "2 hours ago",
+    "comments": [
+      {
+        "name": "John Doe",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Great article!",
+        "time": "1 hour ago"
+      },
+      {
+        "name": "Jane Smith",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Really informative post. Loved the examples!",
+        "time": "30 minutes ago"
+      },
+      {
+        "name": "Mike Johnson",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "I disagree with some points, but overall it's a solid write-up. I disagree with some points, but overall it's a solid write-up. I disagree with some points, but overall it's a solid write-up. I disagree with some points, but overall it's a solid write-up.",
+        "time": "2 hours ago"
+      },
+      {
+        "name": "Sarah Lee",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Can you provide more details on the second topic?",
+        "time": "45 minutes ago"
+      },
+      {
+        "name": "Emily Davis",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Thanks for sharing this! Helped me a lot!",
+        "time": "15 minutes ago"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "content": "Image and article combo!",
+    "image": "https://via.placeholder.com/400x200",
+    "article": "This is how we captured the best sunset photos of 2024.",
+    "video": null,
+    "time": "2 hours ago",
+    "comments": [
+      {
+        "name": "John Doe",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Great article!",
+        "time": "1 hour ago"
+      },
+      {
+        "name": "Jane Smith",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Really informative post. Loved the examples!",
+        "time": "30 minutes ago"
+      },
+      {
+        "name": "Mike Johnson",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "I disagree with some points, but overall it's a solid write-up. I disagree with some points, but overall it's a solid write-up. I disagree with some points, but overall it's a solid write-up. I disagree with some points, but overall it's a solid write-up.",
+        "time": "2 hours ago"
+      },
+      {
+        "name": "Sarah Lee",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Can you provide more details on the second topic?",
+        "time": "45 minutes ago"
+      },
+      {
+        "name": "Emily Davis",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Thanks for sharing this! Helped me a lot!",
+        "time": "15 minutes ago"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "content": "Flashback Friday! Here’s an old video memory.",
+    "image": null,
+    "article": null,
+    "video": "https://www.w3schools.com/html/mov_bbb.mp4",
+    "time": "2 hours ago",
+    "comments": [
+      {
+        "name": "John Doe",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Great article!",
+        "time": "1 hour ago"
+      },
+      {
+        "name": "Jane Smith",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Really informative post. Loved the examples!",
+        "time": "30 minutes ago"
+      },
+      {
+        "name": "Mike Johnson",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "I disagree with some points, but overall it's a solid write-up. I disagree with some points, but overall it's a solid write-up. I disagree with some points, but overall it's a solid write-up. I disagree with some points, but overall it's a solid write-up.",
+        "time": "2 hours ago"
+      },
+      {
+        "name": "Sarah Lee",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Can you provide more details on the second topic?",
+        "time": "45 minutes ago"
+      },
+      {
+        "name": "Emily Davis",
+        "profilePic": "https://via.placeholder.com/50",
+        "commentText": "Thanks for sharing this! Helped me a lot!",
+        "time": "15 minutes ago"
+      }
+    ]
+  }
+]

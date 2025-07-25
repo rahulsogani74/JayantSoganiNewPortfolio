@@ -1,0 +1,111 @@
+/* Loader Overlay to cover the entire screen */
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px); /* Blur effect */
+  z-index: 999; /* Ensure it's on top of other content */
+}
+
+/* Wrapper for the loader */
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Spinning Circle Loader */
+.loader {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 100%;
+  border: 10px solid #ff3d00; /* Change this color as needed */
+  border-top: 10px solid transparent;
+  animation: spin 1s linear infinite;
+}
+
+/* Rotating animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Dot with flash animation inside the circle */
+.loader:after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #ff3d00; /* Change this color as needed */
+  box-shadow: 20px 0 #ff3d00, -20px 0 #ff3d00;
+  animation: flash 0.5s ease-out infinite alternate;
+}
+
+/* Flash effect on the dot */
+@keyframes flash {
+  0% {
+    background-color: rgba(255, 60, 0, 0.25);
+    box-shadow: 20px 0 rgba(255, 60, 0, 0.25), -20px 0 #ff3d00;
+  }
+  50% {
+    background-color: #ff3d00;
+    box-shadow: 20px 0 rgba(255, 60, 0, 0.25), -20px 0 rgba(255, 60, 0, 0.25);
+  }
+  100% {
+    background-color: rgba(255, 60, 0, 0.25);
+    box-shadow: 20px 0 #ff3d00, -20px 0 rgba(255, 60, 0, 0.25);
+  }
+}
+
+/* Text "Loading" with a moving dot */
+.loader2 {
+  color: #ff6a00; /* Change this color as needed */
+  display: inline-block;
+  position: relative;
+  font-size: 48px;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin-top: 20px; /* Space between loader and text */
+}
+
+.loader2::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background: currentColor;
+  position: absolute;
+  bottom: 10px;
+  right: -5px;
+  box-sizing: border-box;
+  animation: animloader 1s linear infinite;
+}
+
+/* Dot movement animation */
+@keyframes animloader {
+  0% {
+    box-shadow: 10px 0 rgba(255, 255, 255, 0), 20px 0 rgba(255, 255, 255, 0);
+  }
+  50% {
+    box-shadow: 10px 0 #ff6a00, 20px 0 rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 10px 0 #ff6a00, 20px 0 #ff6a00;
+  }
+}

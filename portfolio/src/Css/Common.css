@@ -1,0 +1,81 @@
+:root {
+  /* Font Variables */
+  --font-family: "Segoe UI", "Roboto", Tahoma, Geneva, Verdana, sans-serif;
+
+  /* Primary and Secondary Colors */
+  --primary-color: #007bff; /* Primary color */
+  --secondary-color: #f4f4f4; /* Secondary light background */
+
+  /* Color Variables */
+  --dark-color: #333; /* Dark color for text and icons */
+  --light-background: #f4f7fa; /* Light background */
+  --white-color: #ffffff; /* White color for background */
+  --text-color: #666; /* Text color */
+  --light-text-color: #777; /* Lighter text color */
+  --Green-color: #28a745; /* Green for delivered */
+
+  /* Background Colors */
+  --bg-color: #f4f6f9; /* General background color */
+  --light-bg: #fafbfc; /* Light background color */
+  --hover-bg: #f1f3f6; /* Background color on hover */
+  --active-bg: #e3e7ed; /* Background color on active state */
+  --unread-bg: #ffefba; /* Yellow for unseen messages */
+
+  /* Message Background Colors */
+  --message-sent-bg: #d4edda; /* Background for sent messages */
+  --message-received-bg: #f1f3f6; /* Background for received messages */
+
+  /* Status Colors */
+  --error-color: #dc3545; /* Red for not delivered */
+  --Blue-color: #007bff; /* Blue for seen messages */
+
+  /* Header Variables */
+  --header-bg-color: #333; /* Header background color */
+  --header-text-color: white; /* Header text color */
+
+  /* Spacing Variables */
+  --section-padding: 20px; /* Section padding */
+  --padding20: 20px; /* Common padding */
+
+  /* Border Radius Variables */
+  --border-radius: 10px; /* Default border radius */
+  --large-border-radius: 25px; /* Larger border radius */
+
+  /* Shadow Variables */
+  --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Default box shadow */
+  --box-shadow-light: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+  --box-shadow-dark: 0 4px 20px rgba(0, 0, 0, 0.2); /* Dark shadow */
+
+  /* Shadow and Border Colors */
+  --shadow-color: rgba(0, 0, 0, 0.05); /* Shadow color */
+  --border-color: #eef1f5; /* Border color */
+  --input-border-color: #ccc; /* Input field border color */
+  --input-focus-border-color: #007bff; /* Input focus border color */
+
+  /* Hover Variables */
+  --hover-bg-color: #0056b3; /* Hover background color */
+
+  /* Font Size Variables */
+  --default-font-size: 1.2rem; /* Default font size */
+  --heading-font-size: 2.5rem; /* Heading font size */
+  --font-size-large: 1.8rem; /* Large font size */
+  --font-size-medium: 1.4rem; /* Medium font size */
+  --font-size-small: 1rem; /* Small font size */
+  --font-size-xsmall: 0.9rem; /* Extra small font size */
+
+  /* Image Size Variable */
+  --image-size: 150px; /* Image size */
+
+  /* Transition Duration Variable */
+  --transition-duration: 0.3s; /* Transition duration */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.LinkHideLink {
+  text-decoration: none;
+}

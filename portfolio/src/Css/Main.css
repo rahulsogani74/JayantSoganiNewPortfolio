@@ -1,0 +1,202 @@
+/* Define CSS variables for common properties */
+@import url("./Common.css");
+
+/* App layout */
+.app-layout {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--padding20);
+  width: 100%;
+}
+
+.ads-section {
+  width: 25%; /* Adjusted to 20% */
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+
+.main-content-section {
+  width: 60%; /* Adjusted to 60% */
+  padding: var(--padding20);
+  border-radius: var(--border-radius);
+}
+
+.OuterPortfolio-section {
+  width: 30%; /* Adjusted to 20% */
+  padding: var(--padding20);
+  border-radius: var(--border-radius);
+  position: sticky;
+  top: 0; /* Stick to the top */
+  align-self: start; /* Start aligning at the top */
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+}
+
+.main-content p {
+  margin: auto;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.main-content img {
+  width: 100%;
+  margin: var(--padding20) 0;
+  border-radius: var(--border-radius);
+}
+
+/* Ads section */
+.ads {
+  background-color: var(--secondary-color);
+  padding: var(--padding20);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-top: var(--padding20);
+  margin-right: var(--padding20);
+  text-align: center;
+}
+
+.ad-item {
+  position: relative; /* Make it a positioned element */
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-light);
+  padding: 15px;
+  margin: var(--padding20) 0;
+  transition: transform var(--transition-duration);
+}
+
+.ad-label {
+  position: absolute; /* Position it absolutely */
+  top: 5px; /* Distance from the top */
+  right: 10px; /* Distance from the right */
+  color: wheat; /* Text color */
+  background-color: rgba(0, 0, 0, 0.7);
+  font-weight: 500;
+  padding: 5px; /* Padding for the label */
+  font-size: var(--font-size-xsmall); /* Set font size */
+  border-radius: var(--border-radius); /* Optional: rounded corners */
+}
+
+.ads img {
+  width: 100%;
+  border-radius: var(--border-radius);
+  margin-bottom: 10px;
+}
+
+.ads .ad-item p {
+  font-size: var(--font-size-xsmall);
+}
+
+/* Portfolio section */
+.OuterPortfolio {
+  width: 100%;
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  margin: auto;
+  padding: 10px;
+}
+
+.profile {
+  margin-bottom: 30px;
+}
+
+.profile-pic {
+  width: var(--image-size);
+  height: var(--image-size);
+  border-radius: 50%;
+  border: 4px solid var(--light-text-color);
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.profile h2 {
+  font-size: var(--font-size-large);
+  color: var(--text-color);
+  margin: 10px 0;
+}
+
+.brief-about {
+  font-size: var(--font-size-small);
+  color: var(--light-text-color);
+  margin: 10px 0;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.location,
+.company {
+  font-size: var(--font-size-xsmall);
+  color: #555;
+}
+
+.location i,
+.company i {
+  margin-right: 5px;
+  color: var(--primary-color);
+}
+
+/* Portfolio item */
+.OuterPortfolio-item {
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-light);
+  padding: 15px;
+  margin: var(--padding20) 0;
+  transition: transform var(--transition-duration);
+}
+
+.OuterPortfolio-item:hover {
+  transform: translateY(-5px);
+}
+
+.OuterPortfolio-item img {
+  width: 100%;
+  border-radius: var(--border-radius);
+  margin-bottom: 10px;
+}
+
+.OuterPortfolio-item h3 {
+  font-size: var(--font-size-medium);
+  color: var(--text-color);
+}
+
+.OuterPortfolio-item p {
+  font-size: var(--font-size-small);
+  color: var(--light-text-color);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .app-layout {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .OuterPortfolio-section {
+    order: 1; /* Portfolio section on top */
+    width: 100%; /* 90% width for mobile view, centered */
+    margin: 0px !important;
+    padding: 20px !important;
+    position: relative;
+    height: fit-content;
+  }
+
+  .main-content-section {
+    order: 2; /* Main content comes after portfolio */
+    width: 100%; /* 90% width for mobile view, centered */
+    margin: 0px;
+    padding-top: 0px;
+  }
+
+  .ads-section {
+    order: 3; /* Ads section at the bottom */
+    width: 90%; /* 90% width for mobile view, centered */
+    margin: var(--padding20) auto; /* Adds auto margin to center it */
+  }
+
+  .ads {
+    margin-right: 0px;
+  }
+}

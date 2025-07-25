@@ -1,0 +1,83 @@
+/* Mobile Sidebar */
+
+.mobile-sidebar .top-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  align-items: center;
+  z-index: 100;
+}
+
+.mobile-sidebar .user-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.mobile-sidebar .nav-link {
+  color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  padding: 8px;
+  text-decoration: none;
+}
+
+.mobile-sidebar .nav-link.active-link {
+  color: #f39c12;
+}
+
+.mobile-sidebar .side-menus {
+  display: none;
+}
+
+.mobile-sidebar.open .side-menus {
+  display: inline;
+}
+
+.mobile-sidebar .Mob_hamburger {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.mobile-sidebar .extra-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: #34495e;
+  padding: 10px 0;
+}
+
+.mobile-sidebar .extra-row .nav-link {
+  font-size: 14px;
+}
+
+/* Auth links styling */
+
+.mobile-sidebar .auth-link.active-link {
+  color: #f39c12;
+}
+
+.Mob_hamburger {
+  background: none; /* Remove default button styles */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor for button */
+  color: #ffffff; /* Hamburger icon color */
+  transition: transform 0.2s ease; /* Smooth transformation on hover */
+}
+
+/* Rotate hamburger on hover */
+.Mob_hamburger:hover {
+  transform: rotate(10deg); /* Rotate on hover */
+}
+
+.green {
+  color: #34c759;
+}
+
+.red {
+  color: #ff0033;
+}

@@ -1,0 +1,301 @@
+@import url("../Css/Common.css");
+
+/* Navbar Styles */
+.navbar {
+  background-color: var(--white-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  position: relative;
+  box-shadow: var(--box-shadow-light);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar:hover {
+  box-shadow: var(--box-shadow-dark);
+}
+
+.navbar-logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.bar {
+  height: 2px;
+  width: 28px;
+  background-color: var(--dark-color);
+  margin: 4px 0;
+  transition: transform 0.3s ease;
+}
+
+/* Main items container */
+.navbar-items {
+  display: flex;
+  align-items: center;
+}
+
+/* Show items when toggled */
+.navbar-items.show {
+  display: flex;
+}
+
+/* Each navbar item */
+.navbar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--dark-color);
+  position: relative;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* Lift effect on hover */
+.navbar-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Icon styles */
+.navbar-icon {
+  font-size: 24px;
+  margin-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+/* Change icon color on hover */
+.navbar-item:hover .navbar-icon {
+  color: var(--primary-color);
+}
+
+/* Search input styles */
+.navbar-search-large {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.Navsearch-container {
+  position: relative;
+  width: 250px; /* Set width for the search input */
+}
+
+.Navsearch-input {
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
+  width: 100%;
+  box-shadow: var(--box-shadow-light);
+  padding-right: 15%;
+}
+
+.Navsearch-input:hover {
+  border: 2px solid var(--primary-color);
+}
+
+.Navsearch-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px; /* Adjust icon size */
+  color: #666; /* Icon color */
+}
+
+.Navsearch-icon:hover {
+  color: blue;
+}
+
+.navbar-search-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.navbar-items {
+  transition: opacity 0.3s ease; /* Add transition */
+}
+
+.navbar-items.show {
+  display: flex;
+  opacity: 1; /* Make visible when 'show' class is added */
+}
+
+.mobile-search {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  opacity: 0; /* Start with invisible */
+  transition: opacity 0.3s ease; /* Add transition */
+}
+
+.mobile-search.show {
+  display: flex;
+  opacity: 1; /* Make visible when 'show' class is added */
+}
+
+.mobile-search input {
+  padding: 8px 12px;
+  border: 2px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  outline: none;
+  width: 60%;
+  box-shadow: var(--box-shadow-light);
+}
+
+.navbar-item.active {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 4px; /* Adds space for the underline */
+}
+
+/* User Icon Styles */
+.navbar-user-icon {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.user-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #666;
+}
+
+.Navdropdown-icon {
+  font-size: 16px;
+  color: var(--dark-color);
+  transition: transform 0.3s ease;
+}
+
+.Navdropdown-icon.open {
+  transform: rotate(180deg);
+  color: var(--primary-color);
+}
+
+.Navdropdown-menu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: var(--white-color);
+  box-shadow: var(--box-shadow-light);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  z-index: 1000;
+  width: 150px;
+}
+
+.Navdropdown-item {
+  padding: 10px 15px;
+  color: var(--dark-color);
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.Navdropdown-item:hover {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .navbar-items {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: var(--white-color);
+    z-index: 1000;
+    box-shadow: var(--box-shadow-light);
+    animation: slideIn 0.3s ease forwards;
+  }
+
+  .navbar-items.show {
+    display: flex;
+    border-radius: var(--border-radius);
+  }
+
+  .navbar-search-icon {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .navbar-item:hover .navbar-icon {
+    color: var(--white-color);
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-logo {
+    flex-grow: 0;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+
+  .navbar-search-large {
+    display: none;
+  }
+
+  .mobile-search {
+    display: none;
+  }
+
+  .navbar-search-icon {
+    position: absolute;
+    top: 0;
+    right: 25%;
+    margin: 13px;
+    cursor: pointer;
+  }
+
+  .mobile-search.show {
+    display: flex;
+  }
+
+  /* Improved spacing for mobile items */
+  .navbar-item {
+    margin: 10px 0;
+    padding: 10px; /* Added padding for better touch area */
+    width: 100%; /* Full width to avoid crowding */
+    background-color: var(--white-color); /* Background for each item */
+    border-radius: var(--border-radius); /* Rounded corners */
+    box-shadow: var(--box-shadow-light); /* Subtle shadow for depth */
+  }
+
+  .navbar-item:first-child,
+  .navbar-item:last-child {
+    margin: 0 !important;
+  }
+
+  .navbar-item:hover {
+    background-color: var(--primary-color); /* Change background on hover */
+    color: var(--white-color); /* Change text color on hover */
+  }
+  .navbar-user-icon {
+    position: absolute;
+    right: 5px;
+    margin: 5px;
+  }
+}

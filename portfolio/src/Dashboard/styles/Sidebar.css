@@ -1,0 +1,183 @@
+/* Sidebar container styles */
+.sidebar {
+  width: 80px; /* Width when collapsed */
+  background: #2c3e50; /* Dark background */
+  padding: 15px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+  height: 90%; /* Full height */
+  transition: width 0.3s ease, background 0.3s ease; /* Smooth transitions */
+  overflow: auto; /* Hide overflow when collapsed */
+  color: #ffffff; /* Light text color */
+  position: fixed; /* Fix sidebar to the left */
+  top: 10; /* Start from top */
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+  z-index: 100; /* Ensure it stays above other content */
+}
+
+/* Expanded sidebar styles */
+.sidebar.open {
+  width: 250px; /* Width when expanded */
+}
+
+/* User info styles */
+.user-info {
+  display: flex;
+  align-items: center; /* Center user icon and name vertically */
+  margin-bottom: 20px; /* Space below user info */
+}
+
+/* User icon styles */
+.user-icon {
+  border-radius: 50%; /* Circular user icon */
+  margin-right: 10px; /* Space between icon and username */
+  width: 50px; /* Fixed size for user icon */
+  height: 50px; /* Fixed size for user icon */
+  border: 2px solid #ffffff; /* White border around user icon */
+}
+
+/* Username styles */
+.username {
+  margin-left: 10px; /* Space between icon and username */
+  font-weight: 500; /* Bold username */
+  font-size: 1em; /* Slightly larger font size */
+}
+.side-menus {
+  margin-left: 10px; /* Space between icon and username */
+  font-size: 1.1em; /* Slightly larger font size */
+}
+/* Hamburger button styles */
+.hamburger {
+  background: none; /* Remove default button styles */
+  border: none; /* No border */
+  font-size: 24px; /* Font size for hamburger icon */
+  cursor: pointer; /* Pointer cursor for button */
+  color: #ffffff; /* Hamburger icon color */
+  transition: transform 0.2s ease; /* Smooth transformation on hover */
+  margin-bottom: 15px; /* Space below hamburger */
+  margin-left: 13px;
+}
+
+/* Rotate hamburger on hover */
+.hamburger:hover {
+  transform: rotate(10deg); /* Rotate on hover */
+}
+
+/* Navigation links container styles */
+.nav-links {
+  display: flex;
+  flex-direction: column; /* Stack links vertically */
+  margin-top: 20px; /* Space above links */
+}
+
+/* Individual navigation link styles */
+.nav-links a {
+  margin: 5px 0; /* Space between links */
+  color: #ffffff; /* Link text color */
+  text-decoration: none; /* Remove underline */
+  display: flex;
+  align-items: center; /* Align icons and text */
+  padding: 12px 15px; /* Padding for links */
+  border-radius: 5px; /* Rounded corners */
+  transition: background 0.3s ease, transform 0.2s ease; /* Smooth background transition */
+}
+
+/* Hover effect for navigation links */
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.2); /* Background on hover */
+  transform: translateX(5px); /* Subtle hover effect */
+}
+
+/* Active link styling */
+.active-link {
+  font-weight: bold; /* Bold styling for active links */
+  background: rgba(255, 255, 255, 0.3); /* Active link background color */
+}
+
+/* Toggle view styles */
+.toggle-view {
+  margin-top: auto; /* Push the toggle view to the bottom */
+  color: #ffffff; /* Toggle view text color */
+  display: flex;
+  align-items: center; /* Center vertically */
+}
+
+/* Label styles for toggle view */
+.toggle-view label {
+  display: flex;
+  align-items: center; /* Center the label with checkbox */
+  cursor: pointer; /* Pointer cursor for label */
+}
+
+/* Checkbox styles for toggle view */
+.toggle-view input {
+  margin-left: 5px; /* Space between label and checkbox */
+}
+
+/* Authentication links styles */
+.auth-links {
+  margin-top: 20px; /* Space above auth links */
+  display: flex;
+  flex-direction: column; /* Stack auth links vertically */
+}
+
+/* Individual authentication link styles */
+.auth-link {
+  color: #ffffff; /* Auth link text color */
+  text-decoration: none; /* Remove underline */
+  display: flex;
+  align-items: center; /* Align icons and text */
+  padding: 12px 15px; /* Padding for auth links */
+  border-radius: 5px; /* Rounded corners */
+  transition: background 0.3s ease; /* Smooth background transition */
+}
+
+/* Hover effect for authentication links */
+.auth-link:hover {
+  background: rgba(255, 255, 255, 0.2); /* Background color on hover */
+}
+
+.icon-only {
+  display: flex; /* Ensure the icon is centered */
+  justify-content: center; /* Center the icon */
+  align-items: center; /* Center the icon */
+  width: 100%; /* Full width */
+}
+
+.active-link {
+  color: #f1c40f !important; /* Change to your preferred color */
+  font-weight: bold !important;
+  border-left: 4px solid #007bff; /* Optional border */
+}
+
+/* For WebKit browsers (Chrome, Safari) */
+.sidebar::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+}
+
+.sidebar::-webkit-scrollbar-track {
+  border-radius: 10px; /* Rounded corners for the track */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the draggable part (thumb) */
+  border-radius: 10px; /* Rounded corners for the thumb */
+  border: 3px solid #f1f1f1; /* Padding around the thumb */
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Darker color on hover */
+}
+
+.green {
+  color: #34c759;
+}
+
+.red {
+  color: #ff0033;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    height: 95vh;
+  }
+}

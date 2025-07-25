@@ -1,0 +1,490 @@
+/* Root Variables for Common Styles */
+@import url("../Css/Common.css");
+
+/* Messaging App Container */
+.messaging-app {
+  max-width: 1100px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  padding-top: 15px;
+}
+
+/* Layout */
+.messaging-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+  background: var(--light-bg);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  transition: all 0.3s ease;
+}
+
+.messaging-layout:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Portfolio Owner Messaging Styles */
+.portfolio-owner-messages {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  max-height: 500px;
+  background-color: var(--white-color);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+/* Conversation List */
+.conversation-list {
+  width: 30%;
+  overflow-y: auto;
+  background-color: #f7f9fc;
+  border-right: 1px solid var(--border-color);
+}
+
+.conversation-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e6e9ec;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.conversation-item:hover {
+  background-color: var(--hover-bg);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+}
+
+.conversation-item.active {
+  background-color: var(--active-bg);
+}
+
+/* Profile Picture */
+.Msgprofile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 12px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Conversation Info */
+.conversation-info {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.InlineSpace {
+  display: flex; /* Use flexbox layout */
+  justify-content: space-between; /* Space between elements */
+  align-items: center; /* Center items vertically */
+  width: 100%; /* Take full width of the container */
+}
+
+.last.message-time {
+  margin: 0; /* Remove default margin */
+}
+
+.inline {
+  display: inline-flex;
+  gap: 5px;
+}
+
+.conversation-name {
+  width: 60%;
+  font-weight: 600;
+  color: #2e384d;
+  margin: 0;
+}
+
+.last-message {
+  font-size: 0.85rem;
+  color: #8992a0;
+  margin-top: 4px;
+}
+
+/* Message Thread */
+.message-thread {
+  width: 100%;
+  height: 500px;
+  background-color: var(--white-color);
+  border-left: 1px solid var(--border-color);
+  position: relative; /* For positioning child elements */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Message Header */
+.messageHeader {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2b3445;
+  text-transform: capitalize;
+  border-left: 6px groove #007bff;
+  padding-left: 15px;
+  font-family: "Georgia", serif;
+  position: sticky; /* Make header sticky */
+  top: 0; /* Stick to the top */
+  z-index: 10; /* Ensure it is above other elements */
+  background-color: var(
+    --white-color
+  ); /* Set background to avoid transparency */
+  padding: 20px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Messages */
+.messages {
+  display: flex;
+  flex-direction: column;
+  height: 360px;
+  gap: 10px;
+  padding: 20px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.message {
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  border-radius: 18px;
+  width: fit-content;
+  max-width: 75%;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative; /* For absolute positioning of status indicators */
+}
+
+.message.sent {
+  background-color: var(--message-sent-bg);
+  align-self: flex-end;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 18px;
+  margin-right: -10px; /* Adjust to move bubble outwards */
+}
+
+.message.received {
+  background-color: var(--message-received-bg);
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 18px;
+  margin-left: -10px; /* Adjust to move bubble outwards */
+}
+
+.flexRow {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Message Time */
+.message-time {
+  font-size: 0.75rem;
+  color: #a0a0a0;
+  margin-top: 5px;
+}
+
+/* Unread Messages */
+.message.received.unread {
+  background-color: var(--unread-bg);
+}
+
+/* Status Indicators */
+.symbol {
+  margin-top: 5px;
+  font-size: 1rem;
+}
+
+/* Status Color Coding */
+.delivered-symbol {
+  color: var(--Green-color); /* Green for delivered */
+}
+
+.not-delivered-symbol {
+  color: var(--error-color); /* Red for not delivered */
+}
+
+.seen-symbol {
+  color: var(--Blue-color); /* Blue for seen */
+}
+
+.message.unseen .status {
+  color: #ffc107; /* Yellow for unseen */
+}
+
+/* Typing Indicator */
+.typing-indicator {
+  font-style: italic;
+  color: #a0a0a0;
+  margin: 10px 0;
+}
+
+/* No Selection Message */
+.no-selection-message {
+  height: 50%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: #666;
+  font-weight: 500;
+  transition: transform 0.2s;
+}
+
+/* Visitor Messaging Styles */
+.visitor-messages {
+  flex: 1;
+  background-color: var(--white-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Message Input Container */
+.message-input-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: sticky; /* Make input container sticky */
+  bottom: 0; /* Stick to the bottom */
+  z-index: 10; /* Ensure it is above other elements */
+  background-color: var(
+    --white-color
+  ); /* Set background to avoid transparency */
+  padding: 10px; /* Add padding for aesthetics */
+  box-shadow: 0 -4px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Message Input */
+.message-input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--input-border-color);
+  font-size: 1rem;
+  outline: none;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--input-bg-color);
+}
+
+/* Message Input Focus */
+.message-input:focus {
+  border: 1px solid var(--input-focus-border-color);
+  box-shadow: inset 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+/* Send Button */
+.send-button {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.send-button:hover {
+  background-color: var(--hover-bg-color);
+  transform: scale(1.05);
+}
+
+.send-button:active {
+  transform: scale(0.95);
+}
+
+/* Scrollbar for conversation list and message thread */
+.conversation-list::-webkit-scrollbar,
+.messages::-webkit-scrollbar {
+  width: 8px;
+}
+
+.conversation-list::-webkit-scrollbar-thumb,
+.messages::-webkit-scrollbar-thumb {
+  background-color: #ccd2d8;
+  border-radius: 4px;
+}
+
+.conversation-list::-webkit-scrollbar-thumb:hover,
+.messages::-webkit-scrollbar-thumb:hover {
+  background-color: #b0b8c1;
+}
+
+.visitor-messages::-webkit-scrollbar {
+  width: 8px;
+}
+
+.visitor-messages::-webkit-scrollbar-thumb {
+  background-color: #ccd2d8;
+  border-radius: 4px;
+}
+
+.visitor-messages::-webkit-scrollbar-thumb:hover {
+  background-color: #b0b8c1;
+}
+
+.message-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 999;
+}
+
+.chatMenu-wrapper {
+  position: relative;
+  padding-right: 10px;
+}
+
+.chatThree-dots {
+  font-size: 22px;
+  color: #333;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.chatThree-dots:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.chatDropdown-menu {
+  position: absolute;
+  top: 36px;
+  right: 0;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  min-width: 160px;
+  padding: 8px 0;
+  z-index: 999;
+  animation: dropdownFade 0.2s ease-in-out;
+}
+
+.chatDropdown-menu button {
+  width: 100%;
+  padding: 10px 16px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  font-size: 15px;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.chatDropdown-menu button:hover {
+  background-color: #f2f2f2;
+  color: #000;
+}
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.custom-context-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  padding: 6px 0;
+  min-width: 160px;
+  animation: contextFadeIn 0.2s ease;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+.custom-context-menu button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 16px;
+  background: transparent;
+  border: none;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+  gap: 8px;
+}
+
+.custom-context-menu button:hover {
+  background-color: #f5f5f5;
+  color: #111;
+}
+
+@keyframes contextFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .messaging-app {
+    padding: 0px;
+  }
+  .portfolio-owner-messages {
+    flex-direction: column; /* Stack on small screens */
+    max-height: 90vh;
+    gap: 20px;
+  }
+
+  .visitor-messages .messages {
+    height: 75vh;
+  }
+
+  .conversation-list {
+    width: 100%;
+    border-bottom: 3px solid #007bff;
+  }
+
+  .message-thread {
+    width: 100%; /* Full width on mobile */
+    border: none; /* Remove border */
+  }
+
+  .messageHeader {
+    font-size: 1.2rem; /* Adjust header size on mobile */
+  }
+
+  .no-selection-message {
+    font-size: 1rem; /* Smaller font on mobile */
+  }
+}

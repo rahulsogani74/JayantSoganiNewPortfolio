@@ -1,0 +1,668 @@
+@import url("../Css/Common.css");
+
+.InnerPortfolio {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--section-padding);
+  font-family: var(--font-family);
+  background-color: #f4f4f4;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  background-color: var(--header-bg-color);
+  color: var(--header-text-color);
+  border-radius: var(--border-radius);
+}
+
+.header-photo {
+  border-radius: 50%;
+  width: 150px;
+  height: auto;
+  object-fit: cover;
+  border: 3px solid var(--white-color);
+  transition: transform var(--transition-time) ease;
+}
+
+.header-photo:hover {
+  transform: scale(1.1);
+}
+
+.header-info {
+  text-align: center;
+}
+
+.header-info h1 {
+  font-size: var(--heading-font-size);
+  margin: 0;
+}
+
+.header-info h2 {
+  font-size: 1.5rem;
+  color: #999;
+}
+
+.header-social-icons a {
+  color: var(--header-text-color);
+  margin-left: 15px;
+  font-size: 1.5rem;
+  transition: color var(--transition-time) ease;
+}
+
+.header-social-icons a:hover {
+  color: #1da1f2;
+}
+
+/* Section titles */
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--secondary-color2);
+  position: relative;
+  text-align: center;
+}
+
+.section-title::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 5px;
+  background-color: var(--primary-color);
+  bottom: -10px;
+  left: 0;
+}
+
+/* About section */
+.about-section {
+  margin-top: 40px;
+  padding: var(--section-padding);
+  background-color: var(--white-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.about-section p {
+  font-size: var(--default-font-size);
+  line-height: 1.6;
+  margin: auto;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Skills section */
+.skills {
+  margin-top: 40px;
+  padding: 40px 20px;
+  background: var(--white-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.skills-title {
+  font-size: 2em;
+  text-align: center;
+  color: var(--secondary-color2);
+  margin-bottom: 30px;
+}
+
+.skills-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.skill-badge {
+  background: var(--primary-color);
+  padding: 10px 15px;
+  border-radius: 20px;
+  color: var(--white-color);
+  font-weight: bold;
+  text-align: center;
+  transition: background var(--transition-time);
+}
+
+.skill-badge:hover {
+  background: var(--hover-bg-color);
+}
+
+/* Projects section */
+.projects {
+  margin-top: 40px;
+}
+
+.projects h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--secondary-color2);
+  position: relative;
+  margin-left: 10px;
+}
+
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.project-item {
+  background: var(--white-color);
+  border: 1px solid #e1e1e1;
+  border-radius: var(--border-radius);
+  padding: var(--section-padding);
+  box-shadow: var(--box-shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.project-name {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
+  color: var(--secondary-color2);
+  text-align: center;
+}
+
+.project-description {
+  font-size: 1em;
+  color: var(--text-color);
+  margin: 10px 0;
+}
+
+.project-tech {
+  font-size: 0.9em;
+  color: var(--primary-color);
+  font-weight: 500;
+  margin: 5px 0;
+  background-color: #e7f0ff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: var(--primary-color);
+  color: var(--white-color);
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.2s;
+  text-align: center;
+}
+
+.project-link:hover {
+  background: var(--hover-bg-color);
+}
+
+/* Education & Experience timeline */
+.education-section,
+.experience-section {
+  margin-top: 40px;
+}
+
+.educationCard {
+  background-color: var(--hover-bg-color);
+}
+
+.education-timeline .timeline-icon,
+.experience-timeline .timeline-icon {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.timeline-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.timeline-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+/* Contact section */
+.contact {
+  margin-top: 40px;
+  padding: var(--section-padding);
+  background-color: var(--header-bg-color);
+  color: var(--white-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.contact h2 {
+  color: blanchedalmond;
+}
+
+.contact p {
+  font-size: 1.1rem;
+}
+
+.contact p span {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* CSS for Edit button */
+.edit-header {
+  position: fixed; /* Fix position to the viewport */
+  bottom: 90px; /* Distance from the bottom */
+  right: 30px; /* Distance from the right */
+  z-index: 998; /* Ensure it's on top of other content */
+}
+
+.edit-btn {
+  padding: 10px 20px;
+  background-color: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.edit-btn:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  opacity: 1;
+}
+
+.header-photo-edit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-photo-preview {
+  margin-bottom: 10px;
+  width: 150px; /* Set a fixed width */
+  height: 150px; /* Set a fixed height */
+  border-radius: 50%; /* Make it circular */
+  object-fit: cover; /* Maintain aspect ratio */
+  border: 2px solid #ccc; /* Border for better visibility */
+}
+
+.header-photo-edit,
+.header-info-edit {
+  margin-bottom: 15px; /* Spacing between sections */
+}
+
+.header-photo-input,
+.header-name-input,
+.header-title-input,
+.header-social-link-input {
+  width: 100%; /* Full width input */
+  padding: 10px; /* Padding inside the input */
+  margin-top: 5px; /* Space between label and input */
+  border: 1px solid #ced4da; /* Border color */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+}
+
+.header-photo-input:focus,
+.header-name-input:focus,
+.header-title-input:focus,
+.header-social-link-input:focus {
+  border-color: #007bff; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add shadow on focus */
+}
+
+.header-info-edit label {
+  font-weight: bold; /* Make labels bold */
+  margin-bottom: 5px; /* Space below label */
+  display: block; /* Labels are block elements */
+}
+
+.header-social-icons {
+  margin-top: 10px; /* Space above social links */
+}
+
+.header-social-iconsEdit {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px; /* Space above social links */
+}
+
+.header-social-iconsEdit button {
+  margin-top: 5px; /* Space above buttons */
+  padding: 5px 10px; /* Button padding */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 14px; /* Button font size */
+}
+
+.header-social-iconsEdit button:hover {
+  opacity: 0.9; /* Slight opacity change on hover */
+}
+
+.header-social-iconsEdit button {
+  margin-top: 5px; /* Space above buttons */
+  padding: 5px 10px; /* Button padding */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 14px; /* Button font size */
+}
+
+.header-social-iconsEdit button:hover {
+  opacity: 0.9; /* Slight opacity change on hover */
+}
+
+.header-social-iconsEdit button:nth-child(1) {
+  /* Delete button */
+  background-color: #dc3545; /* Bootstrap danger color (red) */
+  color: white; /* White text */
+}
+
+.header-social-iconsEdit button:nth-child(1):hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+.header-social-iconsEdit button:nth-child(3) {
+  /* Add button */
+  background-color: #28a745; /* Bootstrap success color (green) */
+  color: white; /* White text */
+  font-size: 15px;
+}
+
+.header-social-iconsEdit button:nth-child(3):hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.about-description-input {
+  width: 100%; /* Full width */
+  height: 30vh;
+  padding: 10px; /* Padding for comfort */
+  border: 1px solid #ccc; /* Border style */
+  border-radius: 5px; /* Rounded corners */
+  resize: none; /* Disable resizing if desired */
+  font-size: 16px; /* Font size */
+  font-family: var(--font-family);
+  font-size: var(--default-font-size);
+  line-height: 1.6;
+  margin: auto;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.contact-inputs {
+  margin-top: 10px;
+}
+
+.contact-inputs input {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 200px;
+}
+
+.contact-inputs button {
+  padding: 10px 15px;
+  background-color: #28a745; /* Green for Add button */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+.contact-inputs button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.contact-list li {
+  padding: 10px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-list button {
+  padding: 5px 10px;
+  background-color: #dc3545; /* Red for Delete button */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
+  margin-right: 10px;
+}
+
+.contact-list button:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+.skills-input {
+  margin-bottom: 15px;
+}
+
+.skills-input input {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 200px;
+}
+
+.skills-input button {
+  padding: 10px 15px;
+  background-color: #28a745; /* Green for Add button */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.skills-input button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.skills-badges {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill-badge button {
+  margin-left: 10px;
+  padding: 3px 6px;
+  background-color: #dc3545; /* Red for Delete button */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.skill-badge button:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+/* Editable input fields for year, degree, institution, and description */
+.education-section input,
+.education-section textarea {
+  width: 80%;
+  padding: 8px;
+  margin-top: 5px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.education-section input:focus,
+.education-section textarea:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 5px rgba(255, 187, 51, 0.5);
+}
+
+/* Delete button styling */
+.delete-btn {
+  padding: 8px 12px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+/* Add new education button styling */
+.add-btn {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.add-btn i {
+  margin-right: 5px;
+}
+
+.add-btn:hover {
+  background-color: #388e3c;
+}
+
+/* Timeline input fields */
+.timeline-input {
+  width: 80%;
+  padding: 8px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Editable input fields */
+.project-input {
+  width: 75%;
+  padding: 8px;
+  margin: 4px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.project-textarea {
+  width: 75%;
+  height: 15vh;
+  padding: 8px;
+  margin: 4px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.project-image-upload {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.project-image-preview {
+  width: 100px;
+  height: auto;
+  border-radius: 4px;
+  margin-right: 12px;
+}
+
+.project-input[type="file"] {
+  padding: 4px;
+  font-size: 14px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header-photo {
+    margin-bottom: 15px;
+  }
+
+  .about-section,
+  .skills,
+  .projects,
+  .education-section,
+  .experience-section,
+  .contact {
+    padding: 15px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .delete-btn {
+    padding: 0px 5px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+}

@@ -1,0 +1,80 @@
+/* Default desktop styles */
+.sort-by-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 20px;
+  position: relative;
+}
+
+.sort-by-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  z-index: -1;
+}
+
+.sort-by-label {
+  margin-right: 0px;
+  font-size: 14px;
+  color: #333;
+  background-color: white;
+  padding-right: 5px;
+  padding: 0px 10px;
+}
+
+.sort-by-select {
+  padding: 5px 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  background-color: white;
+}
+
+.sort-by-select option {
+  padding: 5px;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .sort-by-container {
+    margin: 10px 0;
+  }
+
+  .sort-by-container::before {
+    width: 100%;
+  }
+
+  .sort-by-label {
+    font-size: 12px; /* Smaller font size */
+    margin-right: 0px;
+    padding: 5px 10px;
+  }
+
+  .sort-by-select {
+    font-size: 12px;
+    padding: 5px;
+    margin-top: 5px;
+  }
+}
+
+/* Very small mobile screens */
+@media (max-width: 480px) {
+  .sort-by-container {
+    margin: 5px 0;
+  }
+
+  .sort-by-label {
+    font-size: 11px;
+  }
+
+  .sort-by-select {
+    font-size: 11px;
+  }
+}

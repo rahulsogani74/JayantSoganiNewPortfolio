@@ -1,0 +1,89 @@
+{
+  "name": "Jayant Sogani",
+  "photo": "https://via.placeholder.com/150",
+  "description": "As a passionate Software Developer with over [X years] of experience, I specialize in creating robust and scalable web applications. My expertise lies in modern technologies such as JavaScript, React, and Node.js, which I utilize to build user-friendly interfaces and efficient back-end services. I am committed to writing clean, maintainable code and am proficient in agile development methodologies, ensuring timely delivery of high-quality software solutions. My problem-solving skills enable me to troubleshoot and optimize applications effectively, while my strong collaboration abilities allow me to work seamlessly with cross-functional teams. Continuously learning and adapting to new technologies is integral to my work ethic, ensuring I stay at the forefront of industry trends.",
+  "education": [
+    {
+      "degree": "B.Sc in Computer Science",
+      "institution": "University of XYZ",
+      "year": "2015"
+    },
+    {
+      "degree": "M.Sc in Software Engineering",
+      "institution": "University of ABC",
+      "year": "2017"
+    }
+  ],
+  "experience": [
+    {
+      "position": "Frontend Developer",
+      "company": "Tech Solutions",
+      "year": "2018 - Present"
+    },
+    {
+      "position": "Intern Developer",
+      "company": "Web Innovations",
+      "year": "2017 - 2018"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Portfolio Website",
+      "description": "A personal portfolio to showcase my work, built using React and CSS.",
+      "image": "https://via.placeholder.com/300x200?text=Portfolio+Website",
+      "technologies": ["React", "CSS", "HTML"],
+      "link": "https://johndoe-portfolio.com"
+    },
+    {
+      "name": "E-commerce App",
+      "description": "An online store built with React and Node.js, featuring a user-friendly interface and secure payment system.",
+      "image": "https://via.placeholder.com/300x200?text=E-commerce+App",
+      "technologies": [
+        "Html",
+        "Css",
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Pyhton"
+      ],
+      "link": "https://johndoe-ecommerce.com"
+    },
+    {
+      "name": "Social Media App",
+      "description": "A social media application allowing users to connect, share posts, and follow friends.",
+      "image": "https://via.placeholder.com/300x200?text=Social+Media+App",
+      "technologies": ["React", "Firebase", "CSS"],
+      "link": "https://johndoe-socialapp.com"
+    },
+    {
+      "name": "Task Management Tool",
+      "description": "A task management tool designed to help teams organize their work and improve productivity.",
+      "image": "https://via.placeholder.com/300x200?text=Task+Management+Tool",
+      "technologies": ["Vue.js", "Node.js", "MongoDB"],
+      "link": "https://johndoe-taskmanager.com"
+    },
+    {
+      "name": "Blog Platform",
+      "description": "A blogging platform allowing users to create, edit, and share their posts.",
+      "image": "https://via.placeholder.com/300x200?text=Blog+Platform",
+      "technologies": ["Django", "React", "PostgreSQL"],
+      "link": "https://johndoe-blog.com"
+    }
+  ],
+  "skills": ["JavaScript", "React", "CSS", "HTML", "Node.js"],
+  "socialLinks": [
+    { "platform": "github", "url": "https://github.com/johndoe" },
+    { "platform": "linkedin", "url": "https://linkedin.com/in/johndoe" }
+  ],
+  "contacts": [
+    {
+      "type": "Email",
+      "value": "johndoe@example.com"
+    },
+    {
+      "type": "Phone",
+      "value": "+1234567890"
+    }
+  ]
+}

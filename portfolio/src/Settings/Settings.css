@@ -1,0 +1,228 @@
+.settings-container {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+}
+
+.settings-sidebar {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.settings-sidebar button {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f0f0f0;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.settings-sidebar button:hover {
+  background-color: #ddd;
+}
+
+.settings-content {
+  flex-grow: 1;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.profile-settings,
+.notification-settings,
+.privacy-settings {
+  max-width: 600px;
+}
+
+.profile-settings {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.profile-settings__field {
+  margin-bottom: 20px;
+}
+
+.profile-settings__social-link {
+  display: flex;
+  flex-direction: row;
+}
+
+.profile-settings__first_input {
+  width: calc(40% - 22px);
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.profile-settings__first_input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.profile-settings__sec_input {
+  width: calc(60% - 22px);
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.profile-settings__sec_input.focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.profile-settings__label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.profile-settings__input {
+  width: calc(100% - 22px);
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.profile-settings__input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.profile-settings__textarea {
+  width: calc(100% - 22px);
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.profile-settings__textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.profile-settings__button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.profile-settings__button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.profile-settings__toggle-edit {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.profile-settings__toggle-edit:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.profile-settings__skill,
+.profile-settings__contact {
+  display: inline-flex;
+}
+
+.profile-settings__autoText_input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.profile-settings__autoText_input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.profile_settings__Del_button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  background-color: #dc3545;
+}
+
+.profile_settings__Del_button:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .profile-settings {
+    padding: 15px;
+  }
+
+  .profile-settings__button,
+  .profile-settings__toggle-edit {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .profile-settings__project,
+  .profile-settings__skill,
+  .profile-settings__contact {
+    flex-direction: column;
+  }
+
+  .profile-settings__project input,
+  .profile-settings__skill input,
+  .profile-settings__contact input {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.save-button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
