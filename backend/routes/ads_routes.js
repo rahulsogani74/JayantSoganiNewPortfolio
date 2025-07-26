@@ -1,17 +1,18 @@
-// --- ads.routes.js ---
 const express = require("express");
 const router = express.Router();
-const { ObjectId } = require("mongodb");
-const base64 = require("base-64");
+const mongoose = require("mongoose");
 const Ad = require("../models/Ad");
 
 router.get("/api/ads", async (req, res) => {
+  console.log("ads ");
+
   try {
-    const ads = await Ad.getAllAds();
+    const ads = await Ad.find();
+    console.log("ads ", ads);
     const adsSorted = ads.sort((a, b) => (b.order || 0) - (a.order || 0));
     res.status(200).json(
       adsSorted.map((ad) => ({
-        ...ad,
+        ...ad.toObject(),
         _id: ad._id.toString(),
         image: ad.image,
       }))
@@ -25,21 +26,20 @@ router.get("/api/ads", async (req, res) => {
 router.post("/api/ads", async (req, res) => {
   try {
     const data = req.body;
-    const existingAds = await Ad.getAllAds();
+    const existingAds = await Ad.find();
     const maxOrder = Math.max(...existingAds.map((a) => a.order || 0), 0);
 
     const imageBuffer = Buffer.from(data.image.split(",")[1], "base64");
 
-    const ad = {
+    const ad = await Ad.create({
       image: imageBuffer.toString("base64"),
       description: data.description,
       link: data.link,
       seen: data.seen || false,
       order: maxOrder + 1,
-    };
+    });
 
-    const insertedId = await Ad.insertAd(ad);
-    res.status(201).json({ _id: insertedId });
+    res.status(201).json({ _id: ad._id.toString() });
   } catch (err) {
     console.error("Error adding ad:", err);
     res.status(500).json({ error: err.message });
@@ -51,7 +51,7 @@ router.put("/api/ads/:adId", async (req, res) => {
     const { adId } = req.params;
     const data = req.body;
 
-    if (!ObjectId.isValid(adId))
+    if (!mongoose.Types.ObjectId.isValid(adId))
       return res.status(400).json({ error: "Invalid ad ID" });
 
     if (data.image) {
@@ -59,7 +59,7 @@ router.put("/api/ads/:adId", async (req, res) => {
       data.image = decoded.toString("base64");
     }
 
-    await Ad.updateAd(adId, data);
+    await Ad.findByIdAndUpdate(adId, data);
     res.status(200).json({ message: "Ad updated successfully" });
   } catch (err) {
     console.error("Error updating ad:", err);
@@ -70,9 +70,10 @@ router.put("/api/ads/:adId", async (req, res) => {
 router.delete("/api/ads/:adId", async (req, res) => {
   try {
     const { adId } = req.params;
-    if (!ObjectId.isValid(adId))
+    if (!mongoose.Types.ObjectId.isValid(adId))
       return res.status(400).json({ error: "Invalid ad ID" });
-    await Ad.deleteAd(adId);
+
+    await Ad.findByIdAndDelete(adId);
     res.status(200).json({ message: "Ad deleted successfully" });
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -87,19 +88,21 @@ router.put("/api/ads/reorder", async (req, res) => {
 
     for (const ad of ads) {
       const { id, newOrder } = ad;
-      if (!id || newOrder == null || !ObjectId.isValid(id)) {
+      if (!id || newOrder == null || !mongoose.Types.ObjectId.isValid(id)) {
         return res.status(400).json({ error: "Invalid input data" });
       }
-      await Ad.swapOrder(id, newOrder);
+      await Ad.findByIdAndUpdate(id, { order: newOrder });
     }
 
-    const updatedAds = await Ad.getAllAds();
+    const updatedAds = await Ad.find();
     const sorted = updatedAds.sort((a, b) => (b.order || 0) - (a.order || 0));
-    res
-      .status(200)
-      .json(
-        sorted.map((ad) => ({ ...ad, _id: ad._id.toString(), image: ad.image }))
-      );
+    res.status(200).json(
+      sorted.map((ad) => ({
+        ...ad.toObject(),
+        _id: ad._id.toString(),
+        image: ad.image,
+      }))
+    );
   } catch (err) {
     console.error("Error reordering ads:", err);
     res.status(500).json({ error: err.message });
@@ -109,12 +112,16 @@ router.put("/api/ads/reorder", async (req, res) => {
 router.put("/api/ads/:adId/toggle-seen", async (req, res) => {
   try {
     const { adId } = req.params;
-    if (!ObjectId.isValid(adId))
+    if (!mongoose.Types.ObjectId.isValid(adId))
       return res.status(400).json({ error: "Invalid ad ID" });
-    const ad = await Ad.getAd(adId);
+
+    const ad = await Ad.findById(adId);
     if (!ad) return res.status(404).json({ error: "Ad not found" });
+
     const newSeen = !ad.seen;
-    await Ad.updateAd(adId, { seen: newSeen });
+    ad.seen = newSeen;
+    await ad.save();
+
     res.status(200).json({ message: "Seen status updated", seen: newSeen });
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -123,17 +130,19 @@ router.put("/api/ads/:adId/toggle-seen", async (req, res) => {
 
 router.get("/api/ads/seen", async (req, res) => {
   try {
-    const ads = await Ad.getAllAds();
+    const ads = await Ad.find();
     const seenAds = ads.filter((ad) => ad.seen);
     const unseenAds = ads.filter((ad) => !ad.seen);
     const sorted = [...seenAds, ...unseenAds].sort(
       (a, b) => (b.order || 0) - (a.order || 0)
     );
-    res
-      .status(200)
-      .json(
-        sorted.map((ad) => ({ ...ad, _id: ad._id.toString(), image: ad.image }))
-      );
+    res.status(200).json(
+      sorted.map((ad) => ({
+        ...ad.toObject(),
+        _id: ad._id.toString(),
+        image: ad.image,
+      }))
+    );
   } catch (err) {
     console.error("Error fetching seen ads:", err);
     res.status(500).json({ error: "Could not fetch seen ads" });

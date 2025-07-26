@@ -9,7 +9,7 @@
   width: 100%;
 }
 
-.ads-section {
+.adds-section {
   width: 25%; /* Adjusted to 20% */
   border-radius: var(--border-radius);
   text-align: center;
@@ -45,7 +45,7 @@
 }
 
 /* Ads section */
-.ads {
+.adds {
   background-color: var(--secondary-color);
   padding: var(--padding20);
   border-radius: var(--border-radius);
@@ -55,7 +55,7 @@
   text-align: center;
 }
 
-.ad-item {
+.adds-item {
   position: relative; /* Make it a positioned element */
   background-color: #fff;
   border-radius: var(--border-radius);
@@ -65,7 +65,7 @@
   transition: transform var(--transition-duration);
 }
 
-.ad-label {
+.adds-label {
   position: absolute; /* Position it absolutely */
   top: 5px; /* Distance from the top */
   right: 10px; /* Distance from the right */
@@ -77,13 +77,13 @@
   border-radius: var(--border-radius); /* Optional: rounded corners */
 }
 
-.ads img {
+.adds img {
   width: 100%;
   border-radius: var(--border-radius);
   margin-bottom: 10px;
 }
 
-.ads .ad-item p {
+.adds .ad-item p {
   font-size: var(--font-size-xsmall);
 }
 
@@ -190,13 +190,13 @@
     padding-top: 0px;
   }
 
-  .ads-section {
-    order: 3; /* Ads section at the bottom */
+  .adds-section {
+    order: 3; /* adds section at the bottom */
     width: 90%; /* 90% width for mobile view, centered */
     margin: var(--padding20) auto; /* Adds auto margin to center it */
   }
 
-  .ads {
+  .adds {
     margin-right: 0px;
   }
 }

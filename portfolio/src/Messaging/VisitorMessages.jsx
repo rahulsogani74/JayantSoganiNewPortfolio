@@ -5,7 +5,6 @@ const VisitorMessages = ({
   visitorData,
   messages,
   onSendMessage,
-  onScrollToFetchOlderMessages,
   onClearChat, // 👈 Function to clear messages
   onEditMessage, // <-- add this
   onDeleteMessage,
@@ -18,7 +17,7 @@ const VisitorMessages = ({
 
   const [editingIndex, setEditingIndex] = useState(null);
 
-  console.log("message visitorData", messages, visitorData);
+  //console.log("message visitorData", messages, visitorData);
 
   const [contextMenu, setContextMenu] = useState({
     visible: false,
@@ -35,7 +34,6 @@ const VisitorMessages = ({
 
   const handleScroll = () => {
     if (messageListRef.current.scrollTop === 0) {
-      onScrollToFetchOlderMessages();
     }
   };
 
@@ -188,7 +186,7 @@ const VisitorMessages = ({
 
       {contextMenu.visible && (
         <div
-          className="custom-context-menu"
+          className="MSgcustom-context-menu"
           style={{ top: contextMenu.y, left: contextMenu.x }}
         >
           <button

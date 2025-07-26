@@ -1,53 +1,35 @@
-# Node.js backend
+# Node.js
 node_modules/
 .env
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-package-lock.json
-.pnpm-debug.log*
 
-# PM2 logs
-logs
-*.log
-
-# React frontend (commonly inside a 'client' or 'portfolio' folder)
+# React
 portfolio/node_modules/
 portfolio/build/
 portfolio/.env
-portfolio/.next/
-portfolio/.turbo/
+portfolio/.DS_Store
 
-# Mac system files
+# General
+*.log
+*.sqlite
+*.pyc
+__pycache__/
 .DS_Store
-
-# Windows system files
 Thumbs.db
 
-# VSCode settings
+# OS
+ehthumbs.db
+Icon?
+desktop.ini
+
+# VScode
 .vscode/
-*.code-workspace
 
-# Others
-*.swp
-*.swo
+# Python Cache
+server/__pycache__/
+*.pyc
 
-# Optional if using TypeScript
-*.tsbuildinfo
+# Ignore portfolio folder from tracking
 
-# IDE folders
-.idea/
-*.iml
-
-# Coverage reports
-coverage/
-
-# ESLint cache
-.eslintcache
-
-# Next.js
-.next/
-
-# Optional Docker
-docker-compose.override.yml
-.docker/

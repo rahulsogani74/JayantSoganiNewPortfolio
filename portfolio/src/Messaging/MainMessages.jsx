@@ -135,7 +135,7 @@ const MainMessages = () => {
       date,
     };
 
-    console.log("🚀 Sending message:", messageData);
+    // console.log("🚀 Sending message:", messageData);
     socket.emit("send_message", messageData);
   };
 
@@ -160,10 +160,18 @@ const MainMessages = () => {
       );
 
       const data = await response.json();
+
       if (response.ok && data && data._id) {
         setConversations([data]);
         setVisitorMessages(formatMessages(data.messages || []));
         setActiveConversation(0);
+        // ✅ Emit join after getting conversation_id
+        socketRef.current.emit("join", {
+          user_type: "owner",
+          user_id: ownerData.id,
+          user_name: ownerData.name,
+          conversation_id: data._id, // Send this!
+        });
       }
     } catch (error) {
       console.error("❌ Error fetching conversation:", error);
@@ -254,25 +262,39 @@ const MainMessages = () => {
       });
 
       socketRef.current.on("connect", () => {
-        console.log("🔌 Socket connected:", socketRef.current.id);
-        // Only emit join for owner (or implement auth logic to decide user)
+        console.log("🔌 [CLIENT] Connected:", socketRef.current.id);
         socketRef.current.emit("join", {
           user_name: ownerData.name,
           user_id: ownerData.id,
+          user_type: "owner",
         });
       });
 
       socketRef.current.on("receive_message", (data) => {
-        console.log("📥 receive_message:", data.message);
+        console.log("📥 [CLIENT] Received message:", data);
         handleIncomingMessage(data);
       });
 
       socketRef.current.on("message_deleted", (msg) => {
+        console.log("🗑️ [CLIENT] Message deleted:", msg);
         updateMessageInState(msg);
       });
 
       socketRef.current.on("message_edited", (msg) => {
+        console.log("✏️ [CLIENT] Message edited:", msg);
         updateMessageInState(msg);
+      });
+
+      socketRef.current.on("typing", (data) => {
+        console.log("📝 [CLIENT] Typing event:", data);
+      });
+
+      socketRef.current.on("stop_typing", (data) => {
+        console.log("✋ [CLIENT] Stop typing event:", data);
+      });
+
+      socketRef.current.on("user_status", ({ user_id, status }) => {
+        console.log("🔄 [CLIENT] User status change:", user_id, status);
       });
     }
 
@@ -280,12 +302,13 @@ const MainMessages = () => {
 
     return () => {
       if (socketRef.current) {
+        console.log(
+          `🔌 [CLIENT] Disconnecting socket: ${socketRef.current.id}, user_id: ${ownerData.id}, name: ${ownerData.name}`
+        );
         socketRef.current.disconnect();
-        console.log("🔌 Socket disconnected");
         socketRef.current = null;
       }
     };
-    // eslint-disable-next-line
   }, []);
 
   return (

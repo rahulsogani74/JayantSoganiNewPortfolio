@@ -3,22 +3,23 @@ import "../../Css/Main.css";
 
 const Ads = ({ ads }) => {
   return (
-    <div className="ads">
+    <div className="adds">
       <h2>Sponsored Ads</h2>
       {ads.length === 0 ? (
         <p>No ads available</p>
       ) : (
         ads?.map((ad) => (
-          <div key={ad._id} className="ad-item">
-            <span className="ad-label">Ads</span> {/* Added label */}
+          <div key={ad._id} className="adds-item">
+            <span className="adds-label">Ads</span> {/* Added label */}
             <a href={ad.link} target="_blank" rel="noopener noreferrer">
+              ssss ss ss
               <img
                 src={`data:image/png;base64,${ad.image}`}
                 alt="Ad"
-                className="ad-image"
+                className="adds-image"
               />
             </a>
-            <p>{ad.description}</p>
+            <p>s s s s {ad.description}</p>
           </div>
         ))
       )}

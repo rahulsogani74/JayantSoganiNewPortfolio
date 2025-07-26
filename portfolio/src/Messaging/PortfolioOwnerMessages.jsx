@@ -20,14 +20,14 @@ const PortfolioOwnerMessages = ({
 
   const [activeVisitor, setActiveVisitor] = useState(null);
 
-  console.log(
-    "ownder ",
-    conversations,
-    "active",
-    activeConversation,
-    "on c",
-    onConversationClick
-  );
+  // console.log(
+  //   "ownder ",
+  //   conversations,
+  //   "active",
+  //   activeConversation,
+  //   "on c",
+  //   onConversationClick
+  // );
 
   const [contextMenu, setContextMenu] = useState({
     visible: false,
@@ -38,7 +38,7 @@ const PortfolioOwnerMessages = ({
 
   const currentMessages = conversations[activeConversation]?.messages || [];
 
-  console.log("currentMessages", currentMessages);
+  // console.log("currentMessages", currentMessages);
 
   const handleSendMessage = async () => {
     if (!message.trim()) return;
@@ -46,11 +46,11 @@ const PortfolioOwnerMessages = ({
     const convo = activeVisitor;
 
     try {
-      console.log("Sending message:", {
-        message,
-        conversationId: convo?.id,
-        name: convo?.name,
-      });
+      // console.log("Sending message:", {
+      //   message,
+      //   conversationId: convo?.id,
+      //   name: convo?.name,
+      // });
 
       await onSendMessage(message, convo?.id, convo?.name);
 
@@ -64,7 +64,7 @@ const PortfolioOwnerMessages = ({
 
   useEffect(() => {
     if (activeConversation !== null) {
-      console.log("Active visitor data:", conversations[activeConversation]);
+      // console.log("Active visitor data:", conversations[activeConversation]);
     }
   }, [activeConversation]);
 
@@ -145,14 +145,14 @@ const PortfolioOwnerMessages = ({
               const visitor = visitors[index];
               onConversationClick(index, visitor.id, visitor.name);
               setActiveVisitor(visitor); // ✅ Store clicked visitor
-              console.log("Clicked visitor:", visitor); // 👀 Debug log
+              // console.log("Clicked visitor:", visitor); // 👀 Debug log
             }}
             onKeyPress={(e) => {
               if (e.key === "Enter") {
                 const visitor = visitors[index];
                 onConversationClick(index, visitor.id, visitor.name);
                 setActiveVisitor(visitor);
-                console.log("Keyboard select visitor:", visitor);
+                // console.log("Keyboard select visitor:", visitor);
               }
             }}
             className={`conversation-item ${
@@ -280,7 +280,7 @@ const PortfolioOwnerMessages = ({
 
       {contextMenu.visible && (
         <div
-          className="custom-context-menu"
+          className="MSgcustom-context-menu"
           style={{ top: contextMenu.y, left: contextMenu.x }}
         >
           <button

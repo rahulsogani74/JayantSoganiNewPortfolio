@@ -44,7 +44,7 @@ const MainHomePage = () => {
         <PostFeed />
         <MainContent />
       </div>
-      <div className="ads-section">
+      <div className="adds-section">
         <Ads ads={ads} />
       </div>
     </div>

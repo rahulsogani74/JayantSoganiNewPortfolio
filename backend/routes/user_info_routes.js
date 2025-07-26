@@ -13,7 +13,7 @@ const Contact = require("../models/Contact");
 
 userRouter.get("/api/basic-info", async (req, res) => {
   try {
-    const infoUsers = await UserInfo.getAll();
+    const infoUsers = await UserInfo.find();
     if (!infoUsers.length)
       return res.status(404).json({ error: "No user info found" });
     const user = infoUsers[0];
@@ -33,16 +33,16 @@ userRouter.get("/api/basic-info", async (req, res) => {
 userRouter.post("/api/basic-info", async (req, res) => {
   try {
     const data = req.body;
-    const users = await UserInfo.getAll();
+    const users = await UserInfo.find();
     if (users.length) {
       const existing = users[0];
-      await UserInfo.updateOne({ _id: existing._id }, { $set: data });
+      await UserInfo.updateOne({ _id: existing._id }, data);
       res.status(200).json({
         message: "Basic info updated successfully",
         id: existing._id.toString(),
       });
     } else {
-      const newUser = await UserInfo.insert(data);
+      const newUser = await UserInfo.create(data);
       res.status(201).json({
         message: "Basic info saved successfully",
         id: newUser.insertedId,
@@ -55,20 +55,21 @@ userRouter.post("/api/basic-info", async (req, res) => {
 
 userRouter.get("/api/user-info", async (req, res) => {
   try {
-    const infoUsers = await UserInfo.getAll();
+    const infoUsers = await UserInfo.find();
+    console.log("calling infoUsers api", infoUsers);
     if (!infoUsers.length)
       return res.status(404).json({ error: "No user info found" });
     const user = infoUsers[0];
     const userId = user._id.toString();
 
-    const [education, experience, projects, skills, socialLinks, contacts] =
+    const [education, experience, projects, skills, social_links, contacts] =
       await Promise.all([
-        Education.getAll(userId),
-        Experience.getAll(userId),
-        Project.getAll(userId),
-        Skill.getAll(userId),
-        SocialLink.getAll(userId),
-        Contact.getAll(userId),
+        Education.find({ userId }),
+        Experience.find({ userId }),
+        Project.find({ userId }),
+        Skill.find({ userId }),
+        SocialLink.find({ userId }),
+        Contact.find({ userId }),
       ]);
 
     res.status(200).json({
@@ -83,7 +84,7 @@ userRouter.get("/api/user-info", async (req, res) => {
       experience,
       projects,
       skills,
-      social_links: socialLinks,
+      social_links: social_links,
       contacts,
     });
   } catch (err) {
@@ -96,7 +97,7 @@ userRouter.post("/api/user-info", async (req, res) => {
   try {
     const data = req.body;
     const userData = data.user_info || {};
-    const infoUsers = await UserInfo.getAll();
+    const infoUsers = await UserInfo.find();
     let userId;
 
     if (infoUsers.length) {
@@ -104,7 +105,7 @@ userRouter.post("/api/user-info", async (req, res) => {
       await UserInfo.updateOne({ _id: existing._id }, { $set: userData });
       userId = existing._id.toString();
     } else {
-      const newUser = await UserInfo.insert(userData);
+      const newUser = await UserInfo.create(userData);
       userId = newUser.insertedId.toString();
     }
 
